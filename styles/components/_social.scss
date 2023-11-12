@@ -1,0 +1,108 @@
+.social__container {
+
+    position: fixed;
+    z-index: 250;
+    bottom: 10rem;
+    //top: 50%;
+    //transform: translateY(-50%);
+    //background-color: aqua;
+    .links {
+
+        .link {
+
+            padding: 1rem;
+            cursor: pointer;
+            //width: 7rem;
+            //height: 7rem;
+            //overflow: hidden;
+            position: relative;
+            transition: all 0.2s;
+           
+            &:hover {
+
+                filter: brightness(110%);
+                
+            }
+            a {
+
+                text-align: center;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: $color-white;
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+                transition: all 0.3s;
+                //width: 5rem;
+                .social__icon {
+
+                    
+                    color: $color-white;
+                    width: 3rem;
+                    height: 3rem;
+                    //margin-right: 1rem;
+                }
+
+
+                .social__title {
+                    
+                    //background-color: aqua;
+
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: all 0.3s;
+                }
+
+               
+                
+
+               
+
+            }
+
+           
+
+            &:hover  {
+
+                
+                .social__title {
+
+                    transform: scaleX(100%);
+                }
+              
+            }
+
+           
+        }
+
+        .link.facebook {
+
+            background-color: $facebook-color;
+
+          
+
+            
+        };
+
+        .link.twitter {
+
+            background-color: $twitter-color;
+
+           
+        };
+        .link.insta {
+
+            background-color: $insta-color;
+
+          
+        };
+        .link.linked {
+
+            background-color: $linked-color;
+
+         
+        };
+    }
+}

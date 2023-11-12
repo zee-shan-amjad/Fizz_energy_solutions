@@ -1,0 +1,169 @@
+.section {
+
+  padding: $section-padding;
+  margin-top: 10rem;
+  @include respond(tab-port) {
+
+    padding: 2rem;
+  }
+
+  @include respond(phone) {
+    padding: 5rem;
+  }
+  .section__heading {
+
+    text-align: center;
+    margin-bottom: 10rem;
+
+    h2 {
+      font-size: 5rem;
+      font-weight: 500;
+
+      span {
+
+        color: $colorPrimary;
+      }
+    }
+  }
+
+  .packages__container {
+
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    @include respond(tab-land) {
+      row-gap: 10rem;
+    }
+    @include respond(tab-port) {
+      //gap: 2rem;
+      row-gap: 10rem;
+    }
+
+    @include respond(phone) {
+      flex-wrap: wrap;
+      gap: 10rem;
+    }
+
+    
+
+    .package {
+
+      padding: 2.5rem;
+      flex: 30%;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      border-radius: 0.5rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s;
+
+      &:hover {
+
+        transform: translateY(-0.3rem) scale(1.05);
+        box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+        outline: 5px solid $colorPrimary;
+        outline-offset: 2rem;
+      }
+
+      //@inclue
+      @include respond(phone) {
+      
+        flex: 100%;
+      }
+      &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+        h3 {
+          font-size: 3rem;
+        }
+      }
+
+      .package__para {
+        font-size: 2rem;
+        color: rgba($color-black, 0.4);
+        margin-bottom: 2rem;
+      }
+
+      &__features {
+        
+        padding-bottom: 1.8rem;
+        border-bottom: 1px dashed rgba($color-black, 0.4);
+        margin-bottom: 3rem;
+        
+        &--feature {
+
+          display: flex;
+          justify-content: space-between;
+          font-size: 1.8rem;
+
+          &:not(:last-child) {
+
+            margin-bottom: 1.8rem;
+          }
+
+          .feature__icon.available {
+
+            width: 3rem;
+            height: 3rem;
+            background-color: $colorPrimary;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .feature__icon.unavailable {
+
+            width: 3rem;
+            height: 3rem;
+            background-color: $color-red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-white;
+          }
+          /*.feature__icon {
+
+            margin-right: 1.5rem;
+            //color: rgba($color-black, 0.9);
+
+            span {
+
+              color: red;
+            }
+          }*/
+          p {
+
+          }
+        }
+       
+      }
+
+      &__units {
+
+        h3 {
+          font-size: 2.5rem;
+
+          span {
+
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .packages__btn {
+
+        align-self: center;
+        justify-self: end;
+        margin-top: 3rem;
+        //bottom: 0rem;
+      }
+    }
+  }
+}

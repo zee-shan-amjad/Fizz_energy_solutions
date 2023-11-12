@@ -1,0 +1,102 @@
+
+.careers {
+
+
+    &__top {
+        position: relative;
+        padding: 10rem 10rem;
+        background-color:  $colorPrimary;
+        margin-bottom: 15rem;
+        .careers__heading_container {
+
+            max-width: 80rem;
+            margin: 0 auto;
+            //background-color: aqua;
+
+            .careers__heading {
+
+                font-size: 8rem;
+                font-weight: 900;
+                color: rgba($color-black, 0.7);
+            }
+        }
+    }
+
+
+    &__category {
+
+        padding: 0 10rem;
+        max-width: 80rem;
+        margin: 0 auto;
+        margin-bottom: 10rem;
+        //background-color: azure;
+        .category__title {
+
+            margin-bottom: 3rem;
+            
+            h3 {
+
+                font-size: 3rem;
+                color: $colorPrimary;
+                padding-bottom: 1rem;
+                border-bottom: 2px solid $colorPrimary;
+                display: inline-block;
+                //background-color: aquamarine;
+
+            }
+        }
+
+        .category__job_card {
+
+            max-width: 70rem;
+            margin: 0 auto;
+            box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+
+            &:not(:last-child) {
+
+                margin-bottom: 5rem;
+            }
+
+            .job__title {
+
+                margin-bottom: 2rem;
+                h6 {
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                }
+            }
+
+            .job__description {
+
+                .description__title {
+                    margin-bottom: 1rem;
+                    h6 {
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                    }
+                }
+
+                .description {
+                    margin-bottom: 3rem;
+                    p {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .apply__email {
+
+                    h3 {
+
+                        font-size: 1.4rem;
+
+                        span {
+
+                            color: $colorPrimary
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

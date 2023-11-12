@@ -1,0 +1,189 @@
+.navbar {
+
+    padding: 0 10rem;
+    height: 6vh;
+    //background-image: linear-gradient(to right, $colorPrimaryLight, $colorPrimary);
+    background-color: $color-white;
+    position: relative;
+    @include respond(tab-land) {
+      padding: 0 5rem;
+    }
+
+    @include respond(tab-port) {
+
+      padding: 0 3rem;
+    }
+
+    @include respond(phone) {
+      padding: 0 2rem;
+    }
+    &_nav {
+  
+      height: 100%;
+      max-width: 150rem;
+      //background-color: aquamarine;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      //position: relative;
+      &-logo {
+        height: 100%;
+        //background-color:aqua;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        img {
+          margin-right: 2rem;
+  
+          height: 100%;
+          
+          //background-color: #777;
+          @include respond(tab-land) {
+            height: 4rem;
+          }
+        }
+
+        h2 {
+
+          font-size: 3rem;
+
+          @include respond (phone) {
+
+            font-size: 2rem;
+          }
+        }
+      }
+  
+      .navbar_nav_mobile {
+        //background-color: $color-white;
+        display: none;
+        position: absolute; 
+        top: 1.7rem;
+        right: 6rem;
+  
+        @include respond (tab-port) {
+          display: block;
+          top: 1.9rem;
+        }
+        .navigation__button {
+  
+          height: 3rem;
+          width: 3rem;
+          
+          //border-radius: 50%;
+          z-index: 200;
+      
+      
+          box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+          cursor: pointer;
+          text-align: center;
+  
+          &:hover .navigation__icon {
+            &::before {transform: translateY(-0.2rem)};
+            &::after {transform: translateY(0.2rem)};
+            }
+  
+        }
+  
+        
+  
+        .navigation__icon {
+  
+          width: 3rem;
+          height: 3px;
+          background-color: $color-grey-dark-3;
+          display: inline-block;
+          position: relative;    //for positioning of ::before and ::after pseudo-classes
+          top: 1.5rem;
+  
+          &::before,
+          &::after {
+            content: "";
+            width: 3rem;
+            height: 3px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+          }
+  
+        &::before {top: -0.8rem};
+        &::after {top: 0.8rem};
+          }
+      }
+  
+      
+      &-menu {
+  
+        display: flex;
+        //display: none;
+        //height: 100%;
+        align-items: center;
+        //background-color: beige;
+  
+        @include respond(tab-port) {
+  
+          position: absolute;
+          background-image: linear-gradient(to bottom, $colorPrimary, $colorPrimaryLight);
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          width: 50%;
+          height: 94vh;
+          right: 0;
+          top:6vh;
+          transform: translateX(100%);
+          transition: all 0.5s;
+          z-index: 100;
+        }
+  
+  
+        .link {
+          //border-bottom: solid $colorBlack;
+          //border-;
+          &:not(:last-child) {
+            margin-right: 10rem;
+  
+           
+            }
+  
+            @include respond(tab-land) {
+              &:not(:last-child) {
+  
+                margin-right: 5rem;
+              }
+  
+             
+          }
+  
+          @include respond(tab-port) {
+            &:not(:last-child) {
+  
+              margin-right: 0rem;
+            }
+          }
+  
+          a:link,
+          a:visited {
+  
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: $colorBlack;
+            cursor: pointer;
+  
+            @include respond(tab-port) {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+  
+  
+      .menu_show {
+        transform: translateX(0%);
+      }
+    }
+  }

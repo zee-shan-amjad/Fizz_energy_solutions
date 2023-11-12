@@ -1,0 +1,266 @@
+.calculator__section {
+
+
+    margin-top: 10rem;
+    background-color: #DFEDF5;
+    padding: 5rem 1rem;
+}
+
+.calculator__container {
+
+    
+    max-width: 120rem;
+    margin: 0 auto;
+    .calculator__section__heading {
+
+        margin-bottom: 1rem;
+        h2 {
+
+            font-size: 3rem;
+        }
+    }
+
+    .calculator__heading {
+        max-width: 50rem;
+        margin-bottom: 5rem;
+        h3 {
+            color: rgba($color-black, 0.9);
+            text-transform: capitalize;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+
+    .appliances__container {
+
+        .appliance {
+            &:not(:last-child) {
+
+                margin-bottom: 5rem;
+            }
+
+            .title {
+
+                margin-bottom: 2rem;
+                h5 {
+                    font-size: 2rem;
+                    color: rgba($color-black, 0.9);
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    
+                    span {
+                        
+                        color: $colorPrimary;
+                        span {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .form__group {
+
+                display: flex;
+                gap: 2rem;
+                
+                .form__radio-group {
+                    
+                    //background-color: aqua;
+                    .form__radio-input {
+
+                        display: none;
+                    }
+
+                    .form__radio-input:checked ~ .form__radio-label {
+
+                        background-color: $colorPrimary;
+                    }
+
+                    .form__radio-label {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 0.5rem;
+                        width: 5rem;
+                        height: 5rem;
+                        background-color: $color-white;
+                        cursor: pointer;
+                        span {
+
+                            
+                            p {
+
+                                font-size: 2rem;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
+        }
+
+        .totalPowerRequired {
+
+            margin-top: 5rem;
+            //background-color: rgba($color-white, 0.9);
+            display: inline-block;
+            font-size: 1.6rem;
+
+            h3 {
+
+                span {
+
+                    color: $colorPrimary;
+                    border-bottom: 1px solid $colorPrimary;
+                }
+            }
+        }
+
+        .custom__query {
+
+            margin-top: 3rem;
+        }
+    }
+}
+
+
+.popup {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+
+    &__overlay {
+
+        background-color: rgba($color-black, 0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10rem;
+
+        @include respond(tab-port) {
+
+            padding: 2rem;
+        }
+        .popup__content {
+    
+            flex-basis: 140rem;
+            margin: 0 auto;
+            background-color: white;
+            //height: 50rem;
+            
+            padding: 5rem 10rem;
+            transition: all 0.3s;
+            transform: scale(1);
+
+            @include respond(tab-port) {
+
+                padding: 5rem;
+            }
+
+            .close {
+
+                position: absolute;
+                font-size: 5rem;
+                right: 1rem;
+                top: 1rem;
+                //background-color: red;
+                line-height: 0.5;
+                transition: all 0.2s;
+                color: $color-grey-dark;
+
+                &:hover {
+
+                    color: $colorPrimary;
+                    cursor: pointer;
+                }
+            }
+
+            .popup__heading {
+
+                margin-bottom: 5rem;
+
+                h4 {
+
+                    font-size: 2rem;
+                }
+            }
+
+            .customer__query_details {
+
+                margin-bottom: 5rem;
+              
+                .equipment {
+                    //background-color: antiquewhite;
+                  
+                    &:not(:last-child) {
+
+                        margin-bottom: 2rem;
+                    }
+
+                    h3 {
+
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+
+            .form {
+
+
+                .details {
+
+                    display: none;
+                }
+
+
+                .input {
+                    margin-bottom: 2rem;
+                    label {
+                        display: block;
+                        font-size: 2rem;
+                        margin-right: 2rem;
+                    }
+
+                    input {
+
+                        margin-bottom: 2rem;
+                        background-color: white !important;
+                        padding: 0.8rem;
+                    }
+
+                }
+
+
+
+                    button {
+
+
+                }
+            }
+        }
+    }
+
+
+}
+
+.popup.hidden {
+    //display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup.hidden .popup__content {
+
+    transform: scale(0.5);
+}
+
+
+

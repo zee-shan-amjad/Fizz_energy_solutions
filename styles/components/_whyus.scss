@@ -1,0 +1,152 @@
+
+.whyus__container {
+    margin-top: 14.8rem;
+    height: 120vh;
+    background-image: radial-gradient($colorFontWhite, $colorPrimary);
+    padding: 5rem 8rem;
+    position: relative;
+
+  
+    @include respond(tab-land) {
+      padding: 5rem 2rem;
+      height: 95vh;
+    }
+
+    @include respond(tab-port) {
+
+      height: 85vh;
+    }
+
+    @include respond(phone) {
+      height: auto;
+    }
+  
+    .container__img {
+      //background-color: #333;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      @include respond(tab-port) {
+        //transform: translate(0, -50%);
+        //left: 0rem;
+        display: none;
+      }
+      img {
+        width: 90%;
+  
+        @include respond(tab-land) {
+          width: 60%;
+        }
+      }
+    }
+    .container__main {
+      position: relative;
+      .container__heading {
+        text-align: center;
+
+
+        @include respond(phone) {
+          margin-bottom: 5rem;
+        }
+        h1 {
+          font-size: 7rem;
+          text-transform: uppercase;
+        }
+      }
+  
+      .benefit {
+        width: 35rem;
+        h2 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.7rem;
+        }
+      }
+
+      
+  
+      .free-maintenance {
+        position: absolute;
+        left: 0rem;
+        top: 25rem;
+  
+        @include respond(tab-land) {
+          top: 20rem;
+        }
+      }
+  
+      .delivery {
+        position: absolute;
+        left: 0rem;
+        top: 50rem;
+  
+        @include respond(tab-land) {
+          top: 40rem;
+        }
+      }
+  
+      .staff {
+        position: absolute;
+        left: 0rem;
+        top: 70rem;
+        width: 40rem;
+  
+        @include respond(tab-land) {
+          top: 60rem;
+        }
+      }
+  
+      .mount {
+        position: absolute;
+        right: 0rem;
+        top: 25rem;
+        @include respond(tab-land) {
+          top: 20rem;
+        }
+      }
+  
+      .response {
+        position: absolute;
+        right: 0rem;
+        top: 50rem;
+  
+        @include respond(tab-land) {
+          top: 40rem;
+        }
+      }
+  
+      .quality {
+        position: absolute;
+        right: 0rem;
+        top: 75rem;
+  
+        @include respond(tab-land) {
+          top: 60rem;
+        }
+      }
+
+      .benefit {
+
+        @include respond(phone) {
+
+          position: relative;
+          top: auto;
+          left: 50%;
+          text-align: center;
+
+          transform: translateX(-50%);
+
+          &:not(:last-child) {
+            margin-bottom: 8rem;
+          }
+        }
+      }
+    }
+  }

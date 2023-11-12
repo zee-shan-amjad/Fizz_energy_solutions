@@ -1,0 +1,26 @@
+.chat__container {
+
+    position: fixed;
+    right: 2rem;
+    bottom: 10rem;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 250;
+
+    .link {
+        padding: 1rem;
+    }
+
+    .whatsapp {
+        background-color: hsl(132,78%,46%);
+        a {
+            text-decoration: none;
+            .whatsapp__icon {
+                width: 5rem;
+                height: 5rem;
+                fill: $color-white;
+                stroke: $color-white;
+            }
+        }
+    }
+}

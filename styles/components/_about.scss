@@ -1,0 +1,56 @@
+
+.about {
+
+  &__header {
+
+    height: 90rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .about__title {
+
+      transform: translateY(-10rem);
+      //position: absolute;
+      //left: 50%;
+      //top: 40%;
+      //transform: translate(-50%, -50%);
+      padding: 0 5rem;
+      //background-color: rgba($color-black, 0.8);
+      h2 {
+
+        font-size: 10rem;
+        color: $color-white;
+
+        @include respond(phone) {
+
+          font-size: 6rem;
+        }
+      }
+
+    }
+  }
+
+  &__content {
+    max-width: 100rem;
+    padding: 0 5rem;
+    margin: 5rem auto;
+    
+    p {
+
+      font-size: 1.6rem;
+      color: rgba($color-black, 0.8);
+
+      span {
+
+        //font-size: 2.5rem;
+        font-weight: 600;
+      }
+
+      &:not(:last-child) {
+
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

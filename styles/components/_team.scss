@@ -1,0 +1,104 @@
+
+.section__team {
+    //background-color: aqua;
+    margin-top: 14.8rem;
+    padding: 5rem 10rem;
+  
+    @include respond(tab-land) {
+      padding: 5rem 3rem;
+    }
+  
+    .heading {
+      margin-bottom: 10rem;
+      h2 {
+        font-size: 7rem;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+    .members {
+      display: flex;
+      justify-content: space-between;
+      gap: 5rem;
+      @include respond(tab-land) {
+        gap: 2rem;
+      }
+  
+      @include respond(tab-port) {
+        flex-wrap: wrap;
+        gap: 10rem;
+      }
+      .member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //background-color: #999;
+        flex: 33.33%;
+  
+        @include respond(tab-port) {
+          flex: 100%;
+        }
+        &__img {
+          img {
+            width: 30rem;
+            //height: 30rem;
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+
+        &__img.fizz {
+
+          img {
+            //transform: scale(1.1) translateY(-2rem);
+            //transform-origin: center;
+          }
+
+         
+        }
+  
+        .member__name {
+          h3 {
+            font-size: 3rem;
+            margin: 1rem 0;
+            text-transform: uppercase;
+          }
+        }
+  
+        .member__designation {
+          text-align: center;
+          p {
+            font-size: 1.7rem;
+  
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .member.member_1 {
+
+        @include respond (tab-port) {
+
+          order: 2
+        }
+      }
+
+      .member.member_2 {
+
+        @include respond (tab-port) {
+
+          order: 1
+        }
+      }
+
+      .member.member_3 {
+
+        @include respond (tab-port) {
+
+          order: 3
+        }
+      }
+    }
+  }
